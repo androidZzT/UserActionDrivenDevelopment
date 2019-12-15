@@ -1,0 +1,2 @@
+include ':app', ':infra-lib'
+rootProject.name='UUADArchitechture'
