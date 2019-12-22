@@ -1,0 +1,269 @@
+allprojects {
+    repositories {
+        google()
+        jcenter()
+//        maven { url 'https://maven.google.com' }
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "28.0.3"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 26
+    androidCompileSdkVersion = 28
+
+    // --------------- Framework ---------------
+    //network
+    okHttpVersion = '3.13.1'
+    retrofitVersion = '2.4.0'
+    moshiVersion = '2.4.0'
+    logInterceptorVersion = '3.9.1'
+
+    //android architecture component
+    lifecycleRuntimeVersion = '1.1.1'
+    lifecycleVersion = '1.1.1'
+    liveDataVersion = '1.1.1'
+    lifecycleCompilerVersion = '1.1.1'
+    pagingVersion = '1.0.0'
+
+    roomVersion = '1.1.1'
+    roomCompiler = '1.1.1'
+
+    //DB debuger
+    DbDebugerVersion = '1.0.4'
+
+    //image loader
+    frescoVersion = '1.11.0'
+
+    //di
+    daggerVersion = '2.15'
+    butterKnifeVersion = '8.8.1'
+
+    //fragmentation
+    fragmentationVersion = '1.3.3'
+
+    //JIMU
+    JIMUVersion = '1.3.1'
+    JIMUCompilerVersion = '1.0.1'
+
+    //ARouter
+    ARouterApiVersion = '1.5.0'
+    ARouterCompilerVersion = '1.2.2'
+
+    //EventBus
+    EventBusVersion = '3.1.1'
+
+    //RxPermission
+    RxPermissionVersion = '0.9.5@aar'
+
+    //leakCanary
+    leakCanaryVersion = '1.5.4'
+
+    //OKHttp Profiler
+    okHttpProfilerVersion = '1.0.4'
+
+    //Parcel Helper
+    parcelerVersion = '1.1.11'
+    // -------------------- Business -------------------
+
+    //uploader
+    //s3
+    AWSSDkVersion = '2.7.7'
+    AWSMobileClientVersion = '2.7.7@aar'
+    AWSMobileAuthUserPoolVersion = '2.7.7@aar'
+    //qiniu
+    QINIUVersion = '7.3.13'
+
+    // -------------------- UI ---------------------
+
+    //android
+    supportLibraryVersion = '28.0.0'
+    designLibraryVersion = '28.0.0'
+    constraintVersion = '1.1.3'
+    materialVersion = '1.2.4'
+
+    //RecyclerView
+    multitypeAdapterVersion = '3.4.0'
+    smartRefreshLayoutVersion = '1.1.0-alpha-5'
+    //recyclerAnimator
+    recyclerAnimatorVersion = '2.2.6'
+
+    //vr support
+    vrSdkVersion = '1.101.0'
+
+    //preference
+    preferenceVersion = '0.1.4'
+
+    //ExoPlayer
+    ExoPlayerVersion = 'r2.4.1'
+
+    ViewPropertyAnimatorVersion = '1.4.5'
+
+    //ImmersiveBar
+    ImmersiveBarVersion = '3.0.0-beta02'
+
+    // ------------------- widget -------------------
+
+    blurViewVersion = '1.4.0'
+
+    ShimmerVersion = '0.2.0'
+
+    BottomNavigationViewExVersion = '1.2.4'
+
+    BadgeViewVersion = '1.1.3'
+
+    ShineButtonVersion = '0.2.0'
+
+    // ------------------- Util -------------------
+
+    ZXingVersion = '3.3.0'
+
+    //------------------ Testing -------------------
+    robolectricVersion = '3.1.1'
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoVersion = '1.9.5'
+    dexmakerVersion = '1.0'
+    espressoVersion = '2.0'
+    testingSupportLibVersion = '0.1'
+
+    presentationDependencies = [
+            dagger                : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroid         : "com.google.dagger:dagger-android:${daggerVersion}",
+            daggerAndroidSupport  : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            daggerAndroidCompiler : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            butterKnife           : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterKnifeCompiler   : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            room                  : "android.arch.persistence.room:runtime:${roomVersion}",
+            roomCompiler          : "android.arch.persistence.room:compiler:${roomCompiler}",
+            supportLibrary        : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            designLibrary         : "com.android.support:design:${designLibraryVersion}",
+            multitypeAdapter      : "me.drakeet.multitype:multitype:${multitypeAdapterVersion}",
+            constraintLayout      : "com.android.support.constraint:constraint-layout:${constraintVersion}",
+            vrSdkAudio            : "com.google.vr:sdk-audio:${vrSdkVersion}",
+            vrSdkBase             : "com.google.vr:sdk-base:${vrSdkVersion}",
+            vrSdkCommon           : "com.google.vr:sdk-common:${vrSdkVersion}",
+            vrSdkCommonWidget     : "com.google.vr:sdk-commonwidget:${vrSdkVersion}",
+            vrSdkController       : "com.google.vr:sdk-controller:${vrSdkVersion}",
+            vrSdkPanoWidget       : "com.google.vr:sdk-panowidget:${vrSdkVersion}",
+            vrSdkVideoWidget      : "com.google.vr:sdk-videowidget:${vrSdkVersion}",
+            smartRefreshLayout    : "com.scwang.smartrefresh:SmartRefreshLayout:${smartRefreshLayoutVersion}",
+            smartRefreshHeader    : "com.scwang.smartrefresh:SmartRefreshHeader:${smartRefreshLayoutVersion}",
+            ARouter               : "com.alibaba:arouter-api:${ARouterApiVersion}",
+            ARouterCompiler       : "com.alibaba:arouter-compiler:${ARouterCompilerVersion}",
+            ExoPlayer             : "com.google.android.exoplayer:exoplayer:${ExoPlayerVersion}",
+            BlurView              : "com.eightbitlab:blurview:${blurViewVersion}",
+            RecyclerAnimator      : "jp.wasabeef:recyclerview-animators:${recyclerAnimatorVersion}",
+            ViewPropertyAnimation : "com.bartoszlipinski:viewpropertyobjectanimator:${ViewPropertyAnimatorVersion}",
+            Shimmer               : "com.facebook.shimmer:shimmer:${ShimmerVersion}",
+            BottomNavigationViewEx: "com.github.ittianyu:BottomNavigationViewEx:${BottomNavigationViewExVersion}",
+            BadgeView             : "q.rorbin:badgeview:${BadgeViewVersion}",
+            shineButton           : "com.sackcentury:shinebutton:${ShineButtonVersion}",
+            ZXing                 : "com.google.zxing:core:${ZXingVersion}",
+            RecyclerViewPager     : "com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2@aar",
+            shineButton           : "com.sackcentury:shinebutton:${ShineButtonVersion}",
+            ImmersiveBar          : "com.gyf.immersionbar:immersionbar:${ImmersiveBarVersion}",
+            ImmersiveBarComponents: "com.gyf.immersionbar:immersionbar-components:${ImmersiveBarVersion}"
+    ]
+
+    presentationTestDependencies = [
+            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+    ]
+
+    domainDependencies = [
+
+    ]
+
+    domainTestDependencies = [
+            junit  : "junit:junit:${jUnitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}",
+            assertj: "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataDependencies = [
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            daggerAndroid           : "com.google.dagger:dagger-android:${daggerVersion}",
+            daggerAndroidSupport    : "com.google.dagger:dagger-android-support:${daggerVersion}",
+            daggerAndroidCompiler   : "com.google.dagger:dagger-android-processor:${daggerVersion}",
+            butterKnife             : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterKnifeCompiler     : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            liveData                : "android.arch.lifecycle:extensions:${liveDataVersion}",
+            lifecycleRuntime        : "android.arch.lifecycle:runtime:${lifecycleRuntimeVersion}",
+            lifecycleJava8          : "android.arch.lifecycle:common-java8:${lifecycleVersion}",
+            lifecycleReactiveStreams: "android.arch.lifecycle:reactivestreams:${lifecycleVersion}",
+            lifecycleCompiler       : "android.arch.lifecycle:compiler:${lifecycleCompilerVersion}",
+            paging                  : "android.arch.paging:runtime:${pagingVersion}",
+            room                    : "android.arch.persistence.room:runtime:${roomVersion}",
+            roomRxjava2             : "android.arch.persistence.room:rxjava2:${roomVersion}",
+            roomCompiler            : "android.arch.persistence.room:compiler:${roomCompiler}",
+            okHttp                  : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            retrofit                : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            logInterceptor          : "com.squareup.okhttp3:logging-interceptor:${logInterceptorVersion}",
+            moshi                   : "com.squareup.retrofit2:converter-moshi:${moshiVersion}",
+            fresco                  : "com.facebook.fresco:fresco:${frescoVersion}",
+            frescoGif               : "com.facebook.fresco:animated-gif:${frescoVersion}",
+            frescoWebp              : "com.facebook.fresco:animated-webp:${frescoVersion}",
+            frescoWebpSupport       : "com.facebook.fresco:webpsupport:${frescoVersion}",
+            frescoOkHttp            : "com.facebook.fresco:imagepipeline-okhttp3:${frescoVersion}",
+            preference              : "com.scottyab:secure-preferences-lib:${preferenceVersion}",
+            material                : "com.github.rey5137:material:${materialVersion}",
+            ARouter                 : "com.alibaba:arouter-api:${ARouterApiVersion}",
+            ARouterCompiler         : "com.alibaba:arouter-compiler:${ARouterCompilerVersion}",
+            RxPermission            : "com.tbruyelle.rxpermissions2:rxpermissions:${RxPermissionVersion}",
+            Fragmentation           : "me.yokeyword:fragmentation-core:${fragmentationVersion}",
+            JIMU                    : "com.github.jimu:componentlib:${JIMUVersion}",
+            JIMUCompiler            : "com.github.jimu:router-anno-compiler:${JIMUCompilerVersion}",
+            AWSSDK                  : "com.amazonaws:aws-android-sdk-s3:${AWSSDkVersion}",
+            AWSMobileClient         : "com.amazonaws:aws-android-sdk-mobile-client:${AWSMobileClientVersion}",
+            AWSMobileAuthUserPool   : "com.amazonaws:aws-android-sdk-auth-userpools:${AWSMobileAuthUserPoolVersion}",
+            QINIUSDK                : "com.qiniu:qiniu-android-sdk:${QINIUVersion}",
+            EventBus                : "org.greenrobot:eventbus:${EventBusVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+    ]
+
+    //------------------- Vendor -------------------
+
+    //domestic
+    WeChatVersion = "+"
+    WeiBoVersion = '4.3.6'
+
+    //oversea
+    FacebookVersion = '4.37.0'
+    TwitterVersion = '3.1.1'
+    GoogleVersion = '15.0.1'
+    StripeVersion = '10.3.0'
+
+    vendorDependencies = [
+            WeChat  : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:${WeChatVersion}",
+            WeiBo   : "com.sina.weibo.sdk:core:${WeiBoVersion}:openDefaultRelease@aar",
+            Facebook: "com.facebook.android:facebook-common:${FacebookVersion}",
+            Twitter : "com.twitter.sdk.android:twitter:${TwitterVersion}",
+            Google  : "com.google.android.gms:play-services-auth:${GoogleVersion}",
+            Stripe : "com.stripe:stripe-android:${StripeVersion}"
+    ]
+
+    //------------------- Develop -------------------
+
+    //Walle
+    WalleVersion = '1.1.6'
+
+    developmentDependencies = [
+            leakCanary    : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            okHttpProfiler: "com.itkacher.okhttpprofiler:okhttpprofiler:${okHttpProfilerVersion}",
+            Walle         : "com.meituan.android.walle:library:${WalleVersion}"
+    ]
+
+}

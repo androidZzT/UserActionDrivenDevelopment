@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_repo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RepoName"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar"/>
+
+    <TextView
+        android:id="@+id/tv_star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        app:layout_constraintRight_toLeftOf="@+id/tv_star_count"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_star_count"
+        android:layout_marginBottom="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
